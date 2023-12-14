@@ -1,0 +1,32 @@
+﻿@model PaginationVM<IEnumerable<CategoryListItemVM>>
+
+<div class="table-responsive">
+    <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var items in Model.Items)
+            {
+                <tr>
+                    <td>@items.Name</td>
+                    <td class="text-center"><a class="btn btn-outline-info" asp-action="Update" asp-route-id="@items.Id">Update</a></td>
+                    <td class="text-center"><a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@items.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<nav aria-label="Page navigation example">
+    <ul id="cat-pag" class="pagination">
+        <li class="page-item  @(Model.HasPrev ? "" : "disabled")"><a class='page-link' asp-action="CategoryPagination" asp-route-page="@(Model.CurrentPage - 1)" asp-route-count="4">Previous</a></li>
+        @for (int i = 1; i <= Model.LastPage; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")"><a class="page-link" asp-action="CategoryPagination" asp-route-page="@i" asp-route-count="4">@i</a></li>
+        }
+        <li class="page-item @(Model.HasNext ? "" : "disabled")"><a class="page-link" asp-action="CategoryPagination" asp-route-page="@(Model.CurrentPage + 1)" asp-route-count="4">Next</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,51 @@
+﻿@model List<SliderListItemVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Slider</h1>
+        <a asp-action="Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        Create Slider
+        </a>
+    </div>
+
+    <!-- DataTables -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Button Text</th>
+                            <th colspan="2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var items in Model)
+                        {
+                            <tr>
+                                <td>@items.Title</td>
+                                <td>@items.Description</td>
+                                <td><img src="@items.Image" width="200"/></td>
+                                <td>@items.ButtonText</td>
+                                <td class="text-center"><a class="btn btn-outline-info" asp-action="Update" asp-route-id="@items.Id">Update</a></td>
+                                <td class="text-center"><a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@items.Id">Delete</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+

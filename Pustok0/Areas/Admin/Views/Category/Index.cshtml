@@ -1,0 +1,36 @@
+﻿@model PaginationVM<IEnumerable<CategoryListItemVM>>
+@{
+    ViewData["Title"] = "Index";
+}
+@section scripts {
+            <script>
+        $(".card").on("click", "#cat-pag a", function (ev) {
+                    ev.preventDefault();
+                    fetch($(this).attr("href"))
+                        .then(res => res.text())
+                .then(data => $(".card").html(data))
+                })
+            </script>
+        }
+        
+      
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Category</h1>
+        <a asp-action="Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            Create Category
+        </a>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <partial model="Model" name="_CategoryPaginationPartial" />
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+

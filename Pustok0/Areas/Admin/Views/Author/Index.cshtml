@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AuthorListItemVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Author</h1>
+        <a asp-action="Create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            Create Author
+        </a>
+    </div>
+
+    <!-- DataTables -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th colspan="2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var items in Model)
+                        {
+                            <tr>
+                                <td>@items.Name</td>
+                                <td>@items.Surname</td>
+                                <td class="text-center"><a class="btn btn-outline-info" asp-action="Update" asp-route-id="@items.Id">Update</a></td>
+                                <td class="text-center"><a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@items.Id">Delete</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+

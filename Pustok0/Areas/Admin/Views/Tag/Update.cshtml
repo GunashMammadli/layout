@@ -1,0 +1,17 @@
+﻿@model TagUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container-fluid">
+    <form method="post" asp-action="Update">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
