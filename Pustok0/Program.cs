@@ -16,9 +16,10 @@ namespace Pustok0
             builder.Services.AddDbContext<PustokDbContext>(opt => {
                 opt.UseSqlServer(builder.Configuration["ConnectionStrings:MsSql"]);
             });
+            builder.Services.AddScoped<LayaoutService>();
             PathConstants.RootPath = builder.Environment.WebRootPath;
             var app = builder.Build();
-            builder.Services.AddScoped<LayaoutService>();
+            
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

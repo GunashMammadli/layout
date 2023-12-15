@@ -18,19 +18,19 @@ namespace Pustok0.Context
         public DbSet<BlogTag> BlogTags { get; set; }
         public DbSet<BlogAuthor> BlogAuthors { get; set; }
         public DbSet<Setting> Settings { get; set; }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Setting>()
-        //        .HasData(new Setting
-        //        {
-        //            Address = "Baku, Metbuat prospekti",
-        //            Email = "gunash@gmail.com",
-        //            Number1 = "+994107181535",
-        //            Logo = "assets/image/logo.png",
-        //            Id = 1
-        //        });
-        //    base.OnModelCreating(modelBuilder);
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Setting>()
+                .HasData(new Setting
+                {
+                    Address = "Baku, Metbuat prospekti",
+                    Email = "gunash@gmail.com",
+                    Number1 = "+994107181535",
+                    Logo = "assets/image/logo.png",
+                    Id = 1
+                });
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
 }

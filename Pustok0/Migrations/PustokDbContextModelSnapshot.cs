@@ -224,6 +224,45 @@ namespace Pustok0.Migrations
                     b.ToTable("ProductTags");
                 });
 
+            modelBuilder.Entity("Pustok0.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Number1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Baku, Metbuat prospekti",
+                            Email = "gunash@gmail.com",
+                            Logo = "assets/image/logo.png",
+                            Number1 = "+994107181535"
+                        });
+                });
+
             modelBuilder.Entity("Pustok0.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
