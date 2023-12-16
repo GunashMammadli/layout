@@ -1,0 +1,36 @@
+﻿@using Pustok0.ViewModels.BasketVM
+@model List<BasketProductItemVM>
+
+<div class="cart-total">
+    <span class="text-number">
+        @Model.Sum(x => x.Count)
+    </span>
+    <span class="text-item">
+        Shopping Cart
+    </span>
+    <span class="price">
+        $@Model.Sum(p => p.Count * p.Price)
+        <i class="fas fa-chevron-down"></i>
+    </span>
+</div>
+@foreach (var item in Model)
+{
+    <div class="cart-dropdown-block">
+        <div class=" single-cart-block ">
+            <div class="cart-product">
+                <a href="product-details.html" class="image">
+                    <img src="~/@item.Image" alt="">
+                </a>
+                <div class="content">
+                    <h3 class="title">
+                        <a href="product-details.html">
+                            @item.Name
+                        </a>
+                    </h3>
+                    <p class="price"><span class="qty">@item.Count ×</span> $@item.Price</p>
+                    <button class="remove" asp-action="RemoveBasket" asp-controller="Product" asp-route-id="@item.Id"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

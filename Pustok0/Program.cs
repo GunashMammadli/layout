@@ -17,6 +17,7 @@ namespace Pustok0
                 opt.UseSqlServer(builder.Configuration["ConnectionStrings:MsSql"]);
             });
             builder.Services.AddScoped<LayaoutService>();
+            builder.Services.AddSession();
             PathConstants.RootPath = builder.Environment.WebRootPath;
             var app = builder.Build();
             
