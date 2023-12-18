@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Pustok0.Models;
 using System.Drawing;
 
 namespace Pustok0.Context
 {
-    public class PustokDbContext : DbContext
+    public class PustokDbContext : IdentityDbContext
     {
         public PustokDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Slider> Sliders { get; set; }
@@ -18,6 +19,7 @@ namespace Pustok0.Context
         public DbSet<BlogTag> BlogTags { get; set; }
         public DbSet<BlogAuthor> BlogAuthors { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Setting>()

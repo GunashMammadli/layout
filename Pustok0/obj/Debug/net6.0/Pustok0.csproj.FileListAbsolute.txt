@@ -1992,3 +1992,8 @@ C:\Users\Birinci Novbe\Desktop\layout\Pustok0\obj\Debug\net6.0\refint\Pustok0.dl
 C:\Users\Birinci Novbe\Desktop\layout\Pustok0\obj\Debug\net6.0\Pustok0.pdb
 C:\Users\Birinci Novbe\Desktop\layout\Pustok0\obj\Debug\net6.0\Pustok0.genruntimeconfig.cache
 C:\Users\Birinci Novbe\Desktop\layout\Pustok0\obj\Debug\net6.0\ref\Pustok0.dll
+C:\Users\user\Desktop\layout\Pustok0\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\user\Desktop\layout\Pustok0\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\user\Desktop\layout\Pustok0\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\user\Desktop\layout\Pustok0\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\user\Desktop\layout\Pustok0\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
