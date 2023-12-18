@@ -123,7 +123,7 @@ namespace Pustok0.Areas.Admin.Controllers
                 StockCount = data.StockCount,
                 Review = data.Review,
                 CategoryId = data.CategoryId,
-                AuthorId = data.ProductAuthors.Select(x => x.AuthorId).ToList(),
+                AuthorId = data.ProductAuthors?.Select(x => x.AuthorId).ToList(),
             };
             return View(vm);
         }
