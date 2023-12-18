@@ -28,7 +28,7 @@
                         </a>
                     </h3>
                     <p class="price"><span class="qty">@item.Count ×</span> $@item.Price</p>
-                    <button class="remove" asp-action="RemoveBasket" asp-controller="Product" asp-route-id="@item.Id"><i class="fas fa-times"></i></button>
+                    <a asp-action="RemoveBasket" asp-controller="Product" asp-route-id="@item.Id"><i class="fas fa-times"></i></a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vL+/jPsHR13Tn54YnhNVDoXSmlfvi9SlQakmqa5BPPY=",
+  "Hash": "L9BiiAGHd1tEbY5jTR8yHrxVEfwftjiSkuhhadCZfI8=",
   "Source": "Pustok0",
   "BasePath": "_content/Pustok0",
   "Mode": "Default",
@@ -33150,6 +33150,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\product\\dukcctqt.2lvScreenshot (1).png"
     },
     {
+      "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\g3neckoy.qfgScreenshot (2).png",
+      "SourceId": "Pustok0",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\",
+      "BasePath": "_content/Pustok0",
+      "RelativePath": "assets/product/g3neckoy.qfgScreenshot (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\product\\g3neckoy.qfgScreenshot (2).png"
+    },
+    {
       "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\gphcn0to.jmoImage 23.jpg",
       "SourceId": "Pustok0",
       "SourceType": "Discovered",
@@ -33216,6 +33233,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\product\\j0ltrfhr.k2lelement_rev_1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\jamiy3i4.o2bScreenshot (1).png",
+      "SourceId": "Pustok0",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\",
+      "BasePath": "_content/Pustok0",
+      "RelativePath": "assets/product/jamiy3i4.o2bScreenshot (1).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\product\\jamiy3i4.o2bScreenshot (1).png"
     },
     {
       "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\jbhqmuex.z0wScreenshot (1).png",
@@ -33405,6 +33439,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\product\\sauioxqo.ef1Screenshot (2).png"
     },
     {
+      "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\sjfdes5p.uqaScreenshot (3).png",
+      "SourceId": "Pustok0",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\",
+      "BasePath": "_content/Pustok0",
+      "RelativePath": "assets/product/sjfdes5p.uqaScreenshot (3).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\product\\sjfdes5p.uqaScreenshot (3).png"
+    },
+    {
       "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\tj2os5mh.0diA Game of Throne.jpg",
       "SourceId": "Pustok0",
       "SourceType": "Discovered",
@@ -33471,6 +33522,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\product\\tzijg4vy.zbyScreenshot (3).png"
+    },
+    {
+      "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\u3bsr5yl.owxScreenshot (3).png",
+      "SourceId": "Pustok0",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\",
+      "BasePath": "_content/Pustok0",
+      "RelativePath": "assets/product/u3bsr5yl.owxScreenshot (3).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\product\\u3bsr5yl.owxScreenshot (3).png"
     },
     {
       "Identity": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\wwwroot\\assets\\product\\unkrdzwk.x2nA Game of Throne.jpg",

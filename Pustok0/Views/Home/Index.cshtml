@@ -14,6 +14,7 @@
             fetch($(this).attr("href"))
                 .then(res => {
                     if (res.ok) {
+
                         toastr["success"]("Product added");
                         toastr.options = {
                             "closeButton": false,

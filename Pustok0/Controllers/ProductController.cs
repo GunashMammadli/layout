@@ -72,17 +72,17 @@ namespace Pustok0.Controllers
             var basket = JsonConvert.DeserializeObject<List<BasketProductAndCountVM>>(HttpContext.Request.Cookies["basket"] ?? "[]");
             var existItem = basket.Find(b => b.Id == id);
 
+
             if (existItem != null && existItem.Count > 0)
             {
-                existItem.Count--;
+                basket.Remove(existItem);
             }
-
+            
             HttpContext.Response.Cookies.Append("basket", JsonConvert.SerializeObject(basket), new CookieOptions
             {
                 MaxAge = TimeSpan.MaxValue
             });
-
-            return Ok();
+            return RedirectToAction(nameof(Index), "Home");
         }
     }
 }
