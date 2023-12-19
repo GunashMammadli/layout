@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pustok0.Areas.Admin.ViewModels.BlogVM;
@@ -10,6 +11,7 @@ using System.Runtime.InteropServices;
 namespace Pustok0.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin, Moderator")]
     public class BlogController : Controller
     {
         PustokDbContext _db { get; }

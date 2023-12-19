@@ -25,7 +25,14 @@ namespace Pustok0
                 opt.Password.RequireNonAlphanumeric = false;
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<PustokDbContext>();
 
-            builder.Services.AddScoped<LayaoutService>();
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = new PathString("/Auth/Login");
+                options.LogoutPath = new PathString("/Auth/Logout");
+                options.AccessDeniedPath = new PathString("/Home/AccessDenied");
+            });
+
+			builder.Services.AddScoped<LayaoutService>();
             builder.Services.AddSession();
             PathConstants.RootPath = builder.Environment.WebRootPath;
             var app = builder.Build();
@@ -40,6 +47,7 @@ namespace Pustok0
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

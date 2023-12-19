@@ -1,0 +1,72 @@
+﻿@model ChangeInfosVM
+@{
+    ViewData["Title"] = "ChangeInfos";
+}
+
+<div class="page-section inner-page-sec-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="row">
+					<!-- My Account Tab Menu Start -->
+					<div class="col-lg-3 col-12">
+						<div class="myaccount-tab-menu nav" role="tablist">
+							<a href="#account-info" data-toggle="tab">
+								<i class="fa fa-user"></i> Change Informations
+							</a>
+							<a asp-action="Logout" asp-controller="Auth"><i class="fas fa-sign-out-alt"></i> Logout</a>
+						</div>
+					</div>
+					<!-- My Account Tab Menu End -->
+					<!-- My Account Tab Content Start -->
+					<div class="col-lg-9 col-12 mt--30 mt-lg--0">
+						<div class="tab-content" id="myaccountContent">
+							<!-- Single Tab Content Start -->
+							<div class="tab-pane fade" id="account-info" role="tabpanel">
+								<div class="myaccount-content">
+									<h3>Change Informations</h3>
+									<div class="account-details-form">
+										<form asp-action="ChangeInfos" asp-controller="Auth" method="post">
+											<div class="row">
+												<div class="col-lg-6 col-12  mb--30">
+													<input class="form-control form-control-user" placeholder="Fullname" asp-for="Fullname">
+													<span class="text-danger" asp-validation-for="Fullname"></span>
+												</div>
+												<div class="col-lg-6 col-12  mb--30">
+													<input class="form-control form-control-user" placeholder="Username" asp-for="Username">
+													<span class="text-danger" asp-validation-for="Username"></span>
+												</div>
+												<div class="col-12  mb--30">
+													<input class="form-control form-control-user" placeholder="Email" asp-for="Email">
+													<span class="text-danger" asp-validation-for="Email"></span>
+												</div>
+												<div class="col-12  mb--30">
+													<h4>Password change</h4>
+												</div>
+												<div class="col-12  mb--30">
+													<input class="form-control form-control-user" placeholder="Password" asp-for="Password">
+													<span class="text-danger" asp-validation-for="Password"></span>
+												</div>
+												<div class="col-lg-6 col-12  mb--30">
+													<input class="mb-0 form-control form-control-user" placeholder="ConfirmPassword" asp-for="ConfirmPassword">
+													<span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+												</div>
+												<div class="col-md-12 text-danger" asp-validation-summary="ModelOnly"></div>
+												<div class="col-12">
+													<button type="submit" class="btn btn--primary">Save Changes</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<!-- Single Tab Content End -->
+						</div>
+					</div>
+					<!-- My Account Tab Content End -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

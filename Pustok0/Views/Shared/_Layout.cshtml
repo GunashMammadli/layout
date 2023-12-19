@@ -329,12 +329,24 @@
                         <div class="col-lg-4">
                             <div class="main-navigation flex-lg-right">
                                 <div class="cart-widget">
-                                    <div class="login-block">
-                                        <a href="login-register.html" class="font-weight-bold">Login</a> <br>
-                                        <span>or</span><a href="login-register.html">Register</a>
-                                    </div>
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="login-block">
+                                            <a asp-action="ChangeInfos" asp-controller="Auth" class="font-weight-bold">@User.Identity.Name</a> <br>
+                                            <a asp-action="Logout" asp-controller="Auth">Logout</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="login-block">
+                                            <a asp-action="Login" asp-controller="Auth">Login</a><br>
+                                            <span>or</span><a asp-action="Register" asp-controller="Auth">Register</a>
+                                        </div>
+                                    }
+
                                     <div id="basket" class="cart-block" ">
-                                        @await Component.InvokeAsync("Basket")
+                                    @await Component.InvokeAsync("Basket")
                                     </div>
                                 </div>
                             </div>
@@ -344,7 +356,7 @@
             </div>
         </div>
 
-            @RenderBody()
+                                    @RenderBody()
 
         <!--=================================
         Footer

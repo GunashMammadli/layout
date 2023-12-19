@@ -1,0 +1,46 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+<main class="page-section inner-page-sec-padding-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
+				<form class="user" asp-controller="Auth" asp-action="Login" method="post">
+					<div class="login-form">
+						<h4 class="login-title">Returning Customer</h4>
+						<p><span class="font-weight-bold">I am a returning customer</span></p>
+						<div class="row">
+							<div class="col-md-12 col-12 mb--15">
+								<input class="form-control form-control-user"
+									   asp-for="UsernameOrEmail"
+									   placeholder="Enter username or email address">
+								<span class="text-danger" asp-validation-for="UsernameOrEmail"></span>
+							</div>
+							<div class="col-12 mb--20">
+								<input class="form-control form-control-user"
+									   placeholder="Password" asp-for="Password">
+								<span class="text-danger" asp-validation-for="Password"></span>
+							</div>
+							<div class="form-group">
+								<div class="custom-control custom-checkbox small">
+									<input class="custom-control-input" asp-for="IsRemember">
+									<label class="custom-control-label" asp-for="IsRemember">
+										Remember
+										Me
+									</label>
+								</div>
+							</div>
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<div class="col-md-12">
+								<button type="submit" class="btn btn-outlined">Login</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
+

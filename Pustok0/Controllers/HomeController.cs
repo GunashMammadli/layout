@@ -39,5 +39,9 @@ namespace Pustok0.Controllers
             };
             return View(vm);
         }
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
     }
 }
