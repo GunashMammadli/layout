@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\layout\\Pustok0\\Pustok0.csproj": {}
+    "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\Pustok0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\layout\\Pustok0\\Pustok0.csproj": {
+    "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\Pustok0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\layout\\Pustok0\\Pustok0.csproj",
+        "projectUniqueName": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\Pustok0.csproj",
         "projectName": "Pustok0",
-        "projectPath": "C:\\Users\\user\\Desktop\\layout\\Pustok0\\Pustok0.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\layout\\Pustok0\\obj\\",
+        "projectPath": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\Pustok0.csproj",
+        "packagesPath": "C:\\Users\\Birinci Novbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Birinci Novbe\\Desktop\\layout\\Pustok0\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Birinci Novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

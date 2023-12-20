@@ -28,6 +28,10 @@ namespace Pustok0.Controllers
 		public async Task<IActionResult> Login(string? returnUrl, LoginVM vm)
 		{
 			AppUser user;
+			if (!ModelState.IsValid)
+			{
+				return View(vm);
+			}
 			if (vm.UsernameOrEmail.Contains("@"))
 			{
 				user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail);
@@ -121,32 +125,37 @@ namespace Pustok0.Controllers
 
         public async Task<IActionResult> ChangeInfos()
         {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            ChangeInfosVM vm = new ChangeInfosVM();
+            if (user != null)
+            {
+                vm = new ChangeInfosVM()
+                {
+                    Fullname = user.Fullname,
+                    Username = user.UserName,
+                    Email = user.Email,
+                };
+            }
+
+            return View(vm);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChangeInfos(ChangeInfosVM vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+
+            if(User.Identity.Name == null) return NotFound();
+         
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            user.Email = vm.Email;
+            user.UserName = vm.Username;
+           
+            await _userManager.UpdateAsync(user);
+            
             return View();
         }
-  //      [HttpPost]
-  //      public async Task<IActionResult> ChangeInfos(ChangeInfosVM vm)
-  //      {
-		//	if (!ModelState.IsValid)
-		//	{
-		//		return View(vm);
-		//	}
-		//	var user = new AppUser
-		//	{
-		//		Fullname = vm.Fullname,
-		//		Email = vm.Email,
-		//		UserName = vm.Username
-		//	};
-		//	var result = await _userManager.CreateAsync(user, vm.Password);
-		//	if (!result.Succeeded)
-		//	{
-		//		foreach (var error in result.Errors)
-		//		{
-		//			ModelState.AddModelError("", error.Description);
-		//		}
-		//		return View(vm);
-		//	}
-			
-		//	return View();
-		//}
     }
 }
