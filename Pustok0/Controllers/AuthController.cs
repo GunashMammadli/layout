@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Pustok0.ExternalServices.Interfaces;
 using Pustok0.Helpers;
 using Pustok0.Models;
 using Pustok0.ViewModels.AuthVM;
@@ -11,15 +12,25 @@ namespace Pustok0.Controllers
 		SignInManager<AppUser> _signInManager { get; }
 		UserManager<AppUser> _userManager { get; }
 		RoleManager<IdentityRole> _roleManager { get; }
+        IEmailService _emailService { get; }
 
 		public AuthController(SignInManager<AppUser> signInManager,
 			   UserManager<AppUser> userManager,
-			   RoleManager<IdentityRole> roleManager)
+			   RoleManager<IdentityRole> roleManager,
+			   IEmailService emailService)
 		{
 			_signInManager = signInManager;
 			_userManager = userManager;
 			_roleManager = roleManager;
+			_emailService = emailService;
 		}
+
+        public IActionResult SendMail()
+        {
+            _emailService.Send("narmin.shivakhanova@code.edu.az", "KFC", "Welcome to KFC");
+            return Ok();
+        }
+
 		public IActionResult Login()
 		{
 			return View();

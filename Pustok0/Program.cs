@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Pustok0.Context;
+using Pustok0.ExternalServices.Implements;
+using Pustok0.ExternalServices.Interfaces;
 using Pustok0.Helpers;
 using Pustok0.Models;
 
@@ -32,6 +34,7 @@ namespace Pustok0
                 options.AccessDeniedPath = new PathString("/Home/AccessDenied");
             });
 
+            builder.Services.AddScoped<IEmailService, EmailService>();
 			builder.Services.AddScoped<LayaoutService>();
             builder.Services.AddSession();
             PathConstants.RootPath = builder.Environment.WebRootPath;
