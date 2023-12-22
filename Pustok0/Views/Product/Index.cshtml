@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="inner-page-sec-padding-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 order-lg-2 mb--40 mb-lg--0">
+                <div class="row space-db-lg--60 space-db--30">
+					<div class="col-lg-4 col-sm-6">
+						<div class="product-card">
+							<div class="product-grid-content">
+								<div class="product-header">
+									<a href="#" class="author">
+										Epple
+									</a>
+									<h3><a href="product-details.html">Here Is A Quick Cure For Book</a></h3>
+								</div>
+								<div class="product-card--body">
+									<div class="card-image">
+										<img src="image/products/product-2.jpg" alt="">
+										<div class="hover-contents">
+											<a href="product-details.html" class="hover-image">
+												<img src="image/products/product-1.jpg" alt="">
+											</a>
+											<div class="hover-btns">
+												<a href="cart.html" class="single-btn">
+													<i class="fas fa-shopping-basket"></i>
+												</a>
+												<a href="wishlist.html" class="single-btn">
+													<i class="fas fa-heart"></i>
+												</a>
+												<a href="compare.html" class="single-btn">
+													<i class="fas fa-random"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#quickModal"
+												   class="single-btn">
+													<i class="fas fa-eye"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="price-block">
+										<span class="price">£51.20</span>
+										<span class="price-discount">20%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="inner-page-sidebar">
+                    <div class="single-block">
+                        <h2 class="sidebar-title mb--30">Search</h2>
+                        <div class="site-mini-search">
+							<input class="form-control" id="search-inp" type="search" name="q" placeholder="Enter key words">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="single-block">
+                        <h2 class="sidebar-title mb--30">Categories</h2>
+						@foreach (var cat in (IEnumerable<Category>)ViewBag.Categories)
+                                    {
+                        <ul class="sidebar-list mb--30">
+								<li>
+									<input name="catIds" type="checkbox" value="@cat.Id" id="cat-@cat.Id" />
+									<label for="cat-@cat.Id">@cat.Name (@cat.Products?.Count())</label>
+								</li>
+                        </ul>
+									}
+                    </div>
+                    <div class="single-block ">
+                        <h2 class="sidebar-title mb--30">Authors</h2>
+                        <ul class="sidebar-list">
+                            <li>@foreach (var author in (IEnumerable<Author>)ViewBag.Authors)
+                                    {
+									<input name="authorIds" type="checkbox" value="@author.Id" id="author-@author.Id" />
+									<label for="author-@author.Id">@author.Name (@author.Products?.Count())</label>
+                                    }</li>
+                        </ul>
+                    </div>
+                    <div class="single-block ">
+                        <h2 class="sidebar-title mb--30">Tags</h2>
+                        <ul class="sidebar-tag-list">
+                            <li><a href="#"> Chilled</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -10,7 +10,8 @@ using Pustok0.ViewModels;
 namespace Pustok0.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "SuperAdmin, Admin, Moderator")]
+    [Authorize(Roles = "SuperAdmin, Admin, Moderator, Member")]
+
     public class SliderController : Controller
     {
         PustokDbContext _db { get; }
